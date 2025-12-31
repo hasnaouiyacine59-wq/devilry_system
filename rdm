@@ -1,0 +1,27 @@
+# FastFood Ordering System
+
+A complete fast food ordering system with Docker containerization.
+
+## Features
+
+- 🍔 **Order Management** - Complete order lifecycle
+- 👥 **User Authentication** - Multi-role system (Admin, Manager, Employee, Driver, Customer)
+- 📱 **Mobile App API** - RESTful API for Android/iOS apps
+- 🖥️ **Admin Dashboard** - Manage orders, users, restaurants
+- 🔒 **Security** - JWT authentication, rate limiting, encrypted passwords
+- 📊 **Real-time Updates** - WebSocket support for live order tracking
+- 🐳 **Dockerized** - Easy deployment with Docker Compose
+
+## Quick Start
+
+### Prerequisites
+- Docker 20.10+
+- Docker Compose 2.20+
+- 4GB RAM minimum
+
+### Installation
+
+1. **Clone and setup:**
+```bash
+git clone <repository-url>
+cd fastfood-docker
