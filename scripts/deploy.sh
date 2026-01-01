@@ -66,7 +66,7 @@ check_dependencies() {
             echo "Install Docker Compose: https://docs.docker.com/compose/install/"
             exit 1
         else
-            DOCKER_COMPOSE_CMD="docker compose"
+            DOCKER_COMPOSE_CMD="docker-compose"
         fi
     else
         DOCKER_COMPOSE_CMD="docker-compose"
@@ -677,7 +677,7 @@ stop_services() {
 
 # Start services
 start_services_cmd() {
-    $DOCKER_COMPOSE_CMD up -d
+    docker-compose up -d
     success "All services started"
 }
 

@@ -1,5 +1,11 @@
 -- Initialize FastFood Database Schema
-
+-- Create the fastfood_admin user FIRST
+/*DO $$ 
+BEGIN
+    IF NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname = 'fastfood_admin') THEN
+          CREATE USER fastfood_admin WITH PASSWORD 'SecurePass123!';
+    END IF;
+END $$;*/
 -- Create extensions
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE EXTENSION IF NOT EXISTS "pgcrypto";
