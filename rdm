@@ -25,3 +25,18 @@ A complete fast food ordering system with Docker containerization.
 ```bash
 git clone <repository-url>
 cd fastfood-docker
+
+
+sudo docker run -d \
+  --name fastfood-db \
+  -e POSTGRES_USER=fastfood_admin \
+  -e POSTGRES_PASSWORD=SecurePass123! \
+  -e POSTGRES_DB=fastfood_db \
+  -p 5432:5432 \
+  -v $(pwd)/init.sql:/tmp/init.sql \
+  fastfood-app-db:latest
+
+
+
+
+ git add . && git commit -m "Your commit message" && git push origin main
