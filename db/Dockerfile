@@ -23,7 +23,7 @@ RUN mkdir -p /backups && chown postgres:postgres /backups
 
 # Health check user
 USER postgres
-RUN echo "CREATE USER healthcheck WITH PASSWORD 'healthcheck_pass';" | psql
+#RUN echo "CREATE USER healthcheck WITH PASSWORD 'healthcheck_pass';" | psql
 
 # Expose port
 EXPOSE 5432
