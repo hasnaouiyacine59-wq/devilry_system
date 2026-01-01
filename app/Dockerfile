@@ -4,6 +4,8 @@ FROM python:3.11-slim as builder
 # Install build dependencies
 RUN apt-get update && apt-get install -y \
     gcc \
+    netcat-openbsd \
+    netcat-traditional \ 
     g++ \
     libpq-dev \
     curl \
@@ -29,6 +31,8 @@ RUN apt-get update && apt-get install -y \
     curl \
     nginx \
     supervisor \
+    netcat-openbsd \
+    netcat-traditional \ 
     && rm -rf /var/lib/apt/lists/*
 
 # Create app user
